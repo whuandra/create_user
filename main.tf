@@ -49,7 +49,10 @@ policy = <<EOF
 EOF
 }
 
-
+module "module_user" {
+    source = "git::github.com/whuandra/module_user.git"
+    }
+    
 
 
 
