@@ -7,7 +7,7 @@ resource "aws_iam_access_key" "dct_corp_aws_aci" {
 user = aws_iam_user.dct_corp_aws_aci.name
 }
 
-resource "aws_iam_group" "dct_corp_aws_aci"
+resource "aws_iam_group" "dct_corp_aws_aci" {
 name = "DCTCorpACIGroup"
 }
 
@@ -17,7 +17,7 @@ group = aws_iam_group.dct_corp_aws_aci.name
 users = [aws_IAM_USER.DCT_CORP_AWS_ACI.NAME]
 }
 
-resource "aws_iam_group_policy_attachement" "dct_corp_aws_aci" {
+resource "aws_iam_group_policy_attachment" "dct_corp_aws_aci" {
 group = aws_iam_group.dct_corp_aws_aci.name
 policy_arn = aws_iam_policy.dct_corp_aws_aci.arn
 }
